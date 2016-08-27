@@ -18,3 +18,18 @@ AirKiss技术应用实例（以智能插座为例）：
 
 > http://iot.weixin.qq.com/wiki/document-7_1.html
 
+一键配置相关命令（For MT7688 on OpenWrt）
+
+```
+iwpriv apcli0 elian start
+
+iwpriv apcli0 elian result
+
+iwpriv apcli0 elian stop
+```
+
+查看接收数据的时间
+
+```
+date; iwpriv apcli0 elian start; while true; do iwpriv apcli0 elian result; date; done
+```
